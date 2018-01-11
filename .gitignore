@@ -1,0 +1,9 @@
+/Client/.vs/
+/Client/Debug/
+/Client/Client/Debug/
+*.vcsproj.filters
+
+/Server/.vs/
+/Server/Debug/
+/Server/Server/Debug/
+
