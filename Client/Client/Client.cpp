@@ -86,15 +86,20 @@ int __cdecl main(int argc, char **argv)
         WSACleanup();
         return 1;
     }
+    int keep_alive = setsockopt(ConnectSocket, SOL_SOCKET, SO_KEEPALIVE, sendbuf, sizeof(sendbuf));
 
-    bool keepSocket = true;
-    while (keepSocket) {
+    if (keep_alive != 0) {
+        printf("Failed to set up socket!");
+        return 1;
+    }
+    
+    while (true) {
         char input[100];
         scanf("%s", input);
         sendbuf = &input[0];
 
         if (input[0] == 'x') {
-            keepSocket = false;
+            break;
         }
 
         iResult = send(ConnectSocket, sendbuf, (int)strlen(sendbuf), 0);
