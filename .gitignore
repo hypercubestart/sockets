@@ -1,9 +1,13 @@
 /Client/.vs/
+/Client/x64/
 /Client/Debug/
 /Client/Client/Debug/
+/Client/Client/x64/
 *.vcsproj.filters
 
 /Server/.vs/
 /Server/Debug/
+/Server/x64/
 /Server/Server/Debug/
+/Server/Server/x64/
 
